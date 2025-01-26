@@ -1,0 +1,40 @@
+!PrefabAsset
+Id: e1e1445f-b1c4-4bb8-abfc-06b86e0e6c5a
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 0c964cde-854d-4b55-8a2c-98e672cc7411
+    Parts:
+        -   Entity:
+                Id: 0c964cde-854d-4b55-8a2c-98e672cc7411
+                Name: Coin_Model
+                Components:
+                    1663aeb9623ef700f0a03a5e891df161: !TransformComponent
+                        Id: 935749f5-d10c-4304-a904-27e84d6b7414
+                        Position: {X: 0.406842, Y: 0.82300067, Z: 3.3430047}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    0d5158ad99b7f73d3bf364122a002091: !ModelComponent
+                        Id: 39213425-8140-43e6-a16d-086f8d251542
+                        Model: 6aa4451b-473e-4212-868b-7cc2ac3bb5e6:model/Coin_Model
+                        Materials: {}
+                    93fdd8f6c3f9450e4e799365450a1d98: !StreamTestStride.Coin,StreamTestStride
+                        Id: 82170492-d10e-4950-bc32-547ef6bf2c5f
+                        self: ref!! 0c964cde-854d-4b55-8a2c-98e672cc7411
+                    dc7ca9ca64ef642e1269df1266e47e7e: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: 2ad19754-ec5c-479a-a0e0-b9835dc731a5
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                d39770dd320396b02e1f54802f34b661: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.3
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: !StreamTestStride.Coin,StreamTestStride ref!! 82170492-d10e-4950-bc32-547ef6bf2c5f

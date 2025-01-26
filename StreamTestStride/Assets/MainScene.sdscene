@@ -1,0 +1,168 @@
+!SceneAsset
+Id: 86421239-be45-4774-97ea-d0f024eef41b
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 594a61a1-c3a6-4330-956c-d1f2f7baa92e
+        - ref!! 3db706b8-e1cb-49c2-9daa-afbd06692c47
+        - ref!! d766494c-690e-41a5-92a8-aef657bee45c
+        - ref!! 479caec5-b7f3-4687-b121-afe4ebc59b23
+        - ref!! f145dbd5-f226-4bf0-a92b-96420a1d9f98
+        - ref!! 09dd24cf-c266-4adf-8843-d140a3ef6089
+        - ref!! 2c5c9c48-47a8-4c3d-a413-00d26163a804
+    Parts:
+        -   Entity:
+                Id: 09dd24cf-c266-4adf-8843-d140a3ef6089
+                Name: Page
+                Components:
+                    a56e41d7b9724710380d9fb823a40674: !TransformComponent
+                        Id: 69a103a8-a923-4c95-9471-f51f19d21f8e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    68fb5d3b2273828ba833d7b15cbaa0fb: !UIComponent
+                        Id: 386d6adc-1103-42fd-a174-99004ac34256
+                        Page: ddf466e3-2151-4aa4-b379-36f64baf2f26:Page
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                        RenderGroup: Group31
+        -   Entity:
+                Id: 2c5c9c48-47a8-4c3d-a413-00d26163a804
+                Name: SpawnCoin
+                Components:
+                    6f78444a85c3b9052fff0a58e3d45528: !TransformComponent
+                        Id: fc6c9665-19e0-4408-8ac8-474655094d2c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    11c01208d6e71c36d82452bbc18e1eb9: !StreamTestStride.CoinSpawner,StreamTestStride
+                        Id: 5b73c7b5-b1ca-47f4-a7a8-0c6a6405b516
+                        coinPrefab: e1e1445f-b1c4-4bb8-abfc-06b86e0e6c5a:prefab/Coin_Model
+        -   Entity:
+                Id: 3db706b8-e1cb-49c2-9daa-afbd06692c47
+                Name: Directional light
+                Components:
+                    508ab560752c95851e2dab5b2a47b361: !TransformComponent
+                        Id: 1b812d1b-23aa-4b6c-82fa-1b9455e234f2
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    83ba94e7c9521dcaaaf26f1abb9e8437: !LightComponent
+                        Id: bef0d2e4-3f89-43e9-83a0-0b81139b491c
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: 479caec5-b7f3-4687-b121-afe4ebc59b23
+                Name: Ground
+                Components:
+                    f83a454c3200ba80b8155b8344b057c3: !TransformComponent
+                        Id: 343edc5d-c962-4ac9-ac19-184eadd2a35a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 3.0, Y: 1.0, Z: 3.0}
+                        Children: {}
+                    9408654b79a5a746004de8ab011e826a: !ModelComponent
+                        Id: 07d76b55-b08f-41dc-8d0c-80f1b7f54280
+                        Model: dafeb84c-493d-4d10-b746-9bb52d94d544:model/Ground
+                        Materials: {}
+                    a6f2f16e78cbd94624a2647080d19e47: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: c1dda026-a573-41e6-afee-19e0bf1f3919
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.MeshCollider,Stride.BepuPhysics
+                            Model: dafeb84c-493d-4d10-b746-9bb52d94d544:model/Ground
+                            Mass: 1.0
+                            Closed: true
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer4
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+        -   Entity:
+                Id: 594a61a1-c3a6-4330-956c-d1f2f7baa92e
+                Name: Camera
+                Components:
+                    0df32fb235778432bcce46defd969fe7: !TransformComponent
+                        Id: 605404c8-4ef6-42ef-a957-fd583228f51c
+                        Position: {X: 0.0, Y: 24.043509, Z: 36.24683}
+                        Rotation: {X: -0.30102706, Y: 0.0, Z: 0.0, W: 0.9536156}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f019d1982ce20d070fa8817fc68f28f1: !CameraComponent
+                        Id: e1057028-c981-47cb-8205-b33eb2e5e7eb
+                        Name: null
+                        Projection: Perspective
+                        Slot: 3025e9d8-4b87-40c0-9313-00ce39df39e8
+        -   Entity:
+                Id: d766494c-690e-41a5-92a8-aef657bee45c
+                Name: Skybox
+                Components:
+                    7601936fa2846cb40954639e8326efa5: !TransformComponent
+                        Id: 062c5fd6-e236-4821-8528-9424f19d588c
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    38fcde82cfaeaffa90cdbe1cd0f6d251: !BackgroundComponent
+                        Id: a8338533-3e76-46c7-951d-ca57cd2f1260
+                        Texture: c5f5e077-41b4-4102-a6b8-05dca76913a4:Skybox texture
+                    5d7d1a0c205c1315f461e427c1400ab7: !LightComponent
+                        Id: f459652c-dbf1-4438-9ec3-aa2c35d877ff
+                        Type: !LightSkybox
+                            Skybox: 62a3e1f3-bf13-4cd9-8a36-de732c705ce9:Skybox
+        -   Entity:
+                Id: f145dbd5-f226-4bf0-a92b-96420a1d9f98
+                Name: Sphere
+                Components:
+                    466135b0e17c9514dde59a87902a2c03: !TransformComponent
+                        Id: 982454f9-35cb-43c4-ab21-6fcda3d2607d
+                        Position: {X: 0.0, Y: 11.205071, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    aeabaeb508c64755a57104808bdf2f18: !ModelComponent
+                        Id: 2b7161ac-a686-4888-810a-4558c54e0a61
+                        Model: a9ded1dd-3b6c-4071-be97-a5a4c0ac3ae2:model/Sphere
+                        Materials: {}
+                    58ee278979cf71ccc9738ceeef919eaf: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: aeb0aae3-1731-4655-b51f-cc5fe131f7fa
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                fd4778dd860de5dfa8281c5a74570660: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.5
+                        SpringFrequency: 5.0
+                        SpringDampingRatio: 0.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: true
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    149f2e318e8a20e4dc69a49d20c963af: !StreamTestStride.ballControll,StreamTestStride
+                        Id: 2a81cc7e-de8b-4d28-8671-349d82560e18
+                        speed: 3.5
+                        collisionMask: Layer4
