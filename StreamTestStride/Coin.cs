@@ -36,12 +36,12 @@ namespace StreamTestStride
                 ScoreUi = pageUI.Page.RootElement.FindVisualChildOfType<TextBlock>("Score");
             }
         }
+        
         public override void Update()
         {
             //this thing make the score ui update
             ScoreUi.Text = "Score: " + Score;
         }
-        
         
         //the collision trigger part
         [DataMemberIgnore] public bool NoContactResponse { get; }
