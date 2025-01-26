@@ -31,7 +31,11 @@ namespace StreamTestStride
             // Do stuff every new frame
             rb.Awake = true;
         }
-
+        
+        /*
+         this is like an update function but used for bepu physics engine simulation update
+         aka use it for anything related to the bepu physics engine
+         */
         public void SimulationUpdate(BepuSimulation simulation, float simTimeStep)
         {
             if (Input.IsKeyDown(Keys.Z))
@@ -51,7 +55,7 @@ namespace StreamTestStride
                 rb.ApplyLinearImpulse(Vector3.UnitX * speed * simTimeStep);
             }
 
-
+            //RayCast to check if the ball is grounded
             if (simulation.RayCast(Entity.Transform.Position, -Vector3.UnitY, .7f, out HitInfo result, collisionMask))
             {
                 isGrounded = true;
@@ -62,7 +66,8 @@ namespace StreamTestStride
                 isGrounded = false;
                 DebugText.Print("Not Grounded", new Int2(20, 20));
             }
-
+            
+            //when the ball is grounded you are able to jump
             if (isGrounded && Input.IsKeyDown(Keys.Space))
             {
                 rb.ApplyLinearImpulse(Vector3.UnitY * 20.0f * simTimeStep);

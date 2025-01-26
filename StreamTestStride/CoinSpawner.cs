@@ -16,6 +16,7 @@ namespace StreamTestStride
 
         public override void Start()
         {
+            //this code create an instance of the prefab and spawn it when the script start aka when the game start
             var coinPrefabInstance = coinPrefab.Instantiate();
             Entity.Scene.Entities.AddRange(coinPrefabInstance);
         }

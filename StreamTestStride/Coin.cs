@@ -15,11 +15,16 @@ namespace StreamTestStride
         // Declared public member fields and properties will show in the game studio
         private Entity ui;
         private TextBlock ScoreUi;
+        
         private Random rnd;
         private float Score;
 
         public override void Start()
         {
+            /*
+             this portion of the code try to fin the ui page after spawning
+             in the scene and then set score ui to the TextBlock in the ui Page
+             */
             ui = Entity.Scene.Entities.FirstOrDefault(e => e.Get<UIComponent>() != null && e.Name == "Page");
 
             rnd = new Random();
@@ -30,16 +35,16 @@ namespace StreamTestStride
                 
                 ScoreUi = pageUI.Page.RootElement.FindVisualChildOfType<TextBlock>("Score");
             }
-            
-            
         }
         public override void Update()
         {
+            //this thing make the score ui update
             ScoreUi.Text = "Score: " + Score;
         }
-
-        [DataMemberIgnore]
-        public bool NoContactResponse => true;
+        
+        
+        //the collision trigger part
+        [DataMemberIgnore] public bool NoContactResponse { get; }
 
         void IContactEventHandler.OnStartedTouching<TManifold>(CollidableComponent collidableComponent,
             CollidableComponent other,
@@ -50,17 +55,7 @@ namespace StreamTestStride
         {
             DebugText.Print("Collecting", new Int2(20, 70));
             Score += 1;
-            Entity.Transform.Position = new Vector3(rnd.Next(-10, 10), .5f, rnd.Next(-10, 10));
+            Entity.Transform.Position = new Vector3(rnd.Next(-15, 15), .3f, rnd.Next(-15, 15));
         }
-        void IContactEventHandler.OnStoppedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other,
-            ref TManifold contactManifold,
-            bool flippedManifold,
-            int workerIndex,
-            BepuSimulation bepuSimulation)
-        {
-            
-        }
-
-        
     }
 }
