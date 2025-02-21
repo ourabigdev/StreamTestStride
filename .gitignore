@@ -2,7 +2,6 @@
 *.user
 *.lock
 *.lock.json
-*.idea
 .vs/
 _ReSharper*
 *.suo

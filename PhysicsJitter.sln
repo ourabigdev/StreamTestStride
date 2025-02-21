@@ -1,0 +1,13 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+VisualStudioVersion = 16.0.0.0
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsJitter.Windows", "PhysicsJitter.Windows\PhysicsJitter.Windows.csproj", "{2463CE5A-BFB8-4C47-B7EF-F775AB9F2835}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsJitter", "PhysicsJitter\PhysicsJitter.csproj", "{609E0F9D-0F1B-4D42-88E7-2AD70B529699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsJitter.Linux", "PhysicsJitter.Linux\PhysicsJitter.Linux.csproj", "{13CF7FE0-B247-404F-92A6-332DF3DBB486}"
+EndProject
+Global
+EndGlobal

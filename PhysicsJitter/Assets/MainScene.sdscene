@@ -1,0 +1,185 @@
+!SceneAsset
+Id: c30b880c-c7e8-4e72-9b92-8a235af72c0b
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! e4a304a3-68e5-44f9-9c72-86b855238d1d
+        - ref!! 04bef57c-b34c-4dec-92db-cba6129c14d4
+        - ref!! 94faffe4-9449-489e-968d-2e4006bfd8e4
+        - ref!! 243c5921-94cc-4a44-92c5-89b6816ef9ef
+        - ref!! afa586f3-a4e9-43e1-8468-cf9b23f9c023
+        - ref!! 6de0341e-6c72-466c-8808-1c49b2a5878f
+    Parts:
+        -   Entity:
+                Id: 04bef57c-b34c-4dec-92db-cba6129c14d4
+                Name: Directional light
+                Components:
+                    cb366040d898928e7184a228912fddd9: !TransformComponent
+                        Id: 1814d009-83e8-424e-91fb-abaac4a847be
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a2dc5f23f1bf33e939354f0ed46c3916: !LightComponent
+                        Id: 8a14e798-2094-498a-a2b0-c6bf544489e1
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: 243c5921-94cc-4a44-92c5-89b6816ef9ef
+                Name: Ground
+                Components:
+                    bd71881ea270c1b8f6ba045342c54817: !TransformComponent
+                        Id: dce95dc8-a6c3-4910-a81f-0d5cbee0ab09
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 5.0, Y: 1.0, Z: 5.0}
+                        Children: {}
+                    1e6a25d3f0318f4696ae4b1593a70230: !ModelComponent
+                        Id: 248f4f9b-efd4-4e1c-b9e8-d4c318fdaada
+                        Model: 5d2cd2e8-7293-4bb8-94cf-94af7831b7dd:Ground
+                        Materials: {}
+                    d1b09ce68c3d7a702ccda3e1a787a88c: !PhysicsJitter.ground,PhysicsJitter
+                        Id: 50d825ca-bd76-4819-9913-8bcef7801cb5
+        -   Folder: null
+            Entity:
+                Id: 27e2c5db-17f1-4a66-b357-3837e4134a3d
+                Name: Cube
+                Components:
+                    54f4316e8147016b6d669b53c108eae4: !TransformComponent
+                        Id: 3e2d1841-ca90-4bb1-bd02-4e7fe7b6ec11
+                        Position: {X: -9.633045, Y: 4.3909636, Z: 0.0766201}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b2b544102a73251fb98fbdbd9aee412d: !ModelComponent
+                        Id: 3cdf1f5f-5c1f-430a-909d-b304db2c57d0
+                        Model: 85859a76-9a91-4da1-8886-0ccbee38da93:Cube
+                        Materials: {}
+                    f5913ea9b878e1582e54f3b48c58e7a7: !PhysicsJitter.BoxObject,PhysicsJitter
+                        Id: 2b403811-684c-4355-ba1e-4d35d038d597
+        -   Entity:
+                Id: 6de0341e-6c72-466c-8808-1c49b2a5878f
+                Name: cubes
+                Components:
+                    1b0e4db0384dbc80f629207a7a8b9272: !TransformComponent
+                        Id: fc5a0fcd-546c-4b0b-8d73-ea1cc7124537
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            203ccc4169e4bf8fea2b68beead83563: ref!! f65848d8-c936-45b2-9c8b-a163c98a61f3
+                            9c5ed2a9a6853f1a4b5e79a0a02159af: ref!! d7be809b-d0e5-49ba-879f-cef810a3ccfd
+                            cc5c2fa5562e664544b8e75627b74d43: ref!! 61d62f88-a84d-40a3-bd22-c57bb4fc788f
+                            6f6aaa33bd697b077a4b7a05c48bd8f6: ref!! 3e2d1841-ca90-4bb1-bd02-4e7fe7b6ec11
+        -   Entity:
+                Id: 94faffe4-9449-489e-968d-2e4006bfd8e4
+                Name: Skybox
+                Components:
+                    3ba0d2759bb204c0274c008ad74004ed: !TransformComponent
+                        Id: 46b99c16-1e3a-4f22-9edf-172bc3f6cf19
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e83ba40daaed05b99cc7bcdbff74a00a: !BackgroundComponent
+                        Id: bcb09cb4-e07f-4043-860e-eeb00d819994
+                        Texture: 5d5d669b-b46a-4267-b396-0bd8d233ad15:Skybox texture
+                    6f37d40546d3a00b728ef039727ad6e8: !LightComponent
+                        Id: 59ec57aa-1b38-4545-9220-a74d2f24abe8
+                        Type: !LightSkybox
+                            Skybox: cae0ba31-d6f1-4334-a6fd-670ba834d162:Skybox
+        -   Entity:
+                Id: 9dd2e63c-3461-41b9-9559-f055a8124278
+                Name: Cube
+                Components:
+                    54f4316e8147016b6d669b53c108eae4: !TransformComponent
+                        Id: f65848d8-c936-45b2-9c8b-a163c98a61f3
+                        Position: {X: -8.804863, Y: 2.369484, Z: 9.811786}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b2b544102a73251fb98fbdbd9aee412d: !ModelComponent
+                        Id: dd8c79d1-12f3-4438-81c9-c95a87484f40
+                        Model: 85859a76-9a91-4da1-8886-0ccbee38da93:Cube
+                        Materials: {}
+                    f5913ea9b878e1582e54f3b48c58e7a7: !PhysicsJitter.BoxObject,PhysicsJitter
+                        Id: 8c4e748a-3c72-4610-9429-049fdcab6a64
+        -   Entity:
+                Id: afa586f3-a4e9-43e1-8468-cf9b23f9c023
+                Name: Sphere
+                Components:
+                    6bc9073b6c07a8126fdb113c666a21b2: !TransformComponent
+                        Id: 95251e19-fb4d-4393-b974-458e6b3d0d6d
+                        Position: {X: 0.0, Y: 4.5103145, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    690d0efa2ab321fac7b4886e7dbb8e24: !ModelComponent
+                        Id: a85eb6ac-ccea-4383-b036-8871d3cee4d8
+                        Model: 9bb61a1a-943c-4f50-ab36-c14ad9b92130:Sphere
+                        Materials: {}
+                    de6b7a21f2780eea857ac400a072e942: !PhysicsJitter.ball,PhysicsJitter
+                        Id: 975b413b-0937-4871-9725-fbc80acc35ca
+        -   Folder: null
+            Entity:
+                Id: c29e1ff3-85eb-47f7-a34b-14634c75b9ad
+                Name: Cube
+                Components:
+                    54f4316e8147016b6d669b53c108eae4: !TransformComponent
+                        Id: 61d62f88-a84d-40a3-bd22-c57bb4fc788f
+                        Position: {X: 7.9473414, Y: 4.3909636, Z: 0.0766201}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b2b544102a73251fb98fbdbd9aee412d: !ModelComponent
+                        Id: 37155380-7b91-42a1-b77c-020230306a7a
+                        Model: 85859a76-9a91-4da1-8886-0ccbee38da93:Cube
+                        Materials: {}
+                    f5913ea9b878e1582e54f3b48c58e7a7: !PhysicsJitter.BoxObject,PhysicsJitter
+                        Id: fdf46329-a982-453b-8282-598cfc402fd3
+        -   Entity:
+                Id: e4a304a3-68e5-44f9-9c72-86b855238d1d
+                Name: Camera
+                Components:
+                    59c482dcbdcd8f3a7448d8cc6715340c: !TransformComponent
+                        Id: b4e42bd9-a8e3-48fa-abff-a689fd5f52e0
+                        Position: {X: 0.0, Y: 12.467049, Z: 24.23859}
+                        Rotation: {X: -0.27416146, Y: 0.0, Z: 0.0, W: 0.9616837}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6d347c93c1c2b92eead55d00fc1ad649: !CameraComponent
+                        Id: 86649e54-49d4-46e9-a83f-5b80a5bc7287
+                        Name: null
+                        Projection: Perspective
+                        Slot: d15f75b9-4487-4c12-9fe5-9c6df4b9b244
+        -   Folder: null
+            Entity:
+                Id: f654cdeb-fa83-47c7-b3c4-2749ae980b5b
+                Name: Cube
+                Components:
+                    54f4316e8147016b6d669b53c108eae4: !TransformComponent
+                        Id: d7be809b-d0e5-49ba-879f-cef810a3ccfd
+                        Position: {X: 7.9473414, Y: 4.3909636, Z: 9.811786}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b2b544102a73251fb98fbdbd9aee412d: !ModelComponent
+                        Id: 455cb7e8-505c-44c3-94b2-edaea1a47b8c
+                        Model: 85859a76-9a91-4da1-8886-0ccbee38da93:Cube
+                        Materials: {}
+                    f5913ea9b878e1582e54f3b48c58e7a7: !PhysicsJitter.BoxObject,PhysicsJitter
+                        Id: 3fe17259-39fb-4d8a-afbe-ec813bdb6ba7
